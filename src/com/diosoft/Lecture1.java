@@ -4,7 +4,7 @@ public class Lecture1 {
 
 	public static void main(String[] args)
 	{
-		StringBuffer message = new StringBuffer();
+		StringBuilder message = new StringBuilder();
 
 		if(args.length > 0)
 		{
