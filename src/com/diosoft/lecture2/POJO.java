@@ -60,9 +60,9 @@ class POJO implements Cloneable {
 
     @Override
     public String toString() {
-        return "POJO{" +
-                "person1=" + person1 +
-                ", person2=" + person2 +
-                '}';
+        final StringBuilder sb = new StringBuilder();
+        sb.append("POJO{").append("person1=").append(person1)
+                .append(", person2=").append(person2).append('}');
+        return sb.toString();
     }
 }
