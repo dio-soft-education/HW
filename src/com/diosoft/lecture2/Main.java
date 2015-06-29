@@ -2,9 +2,9 @@ package com.diosoft.lecture2;
 
 public class Main {
     public static void main(String[] args) {
-        POJO obj1 = new POJO();
-        POJO obj2 = new POJO(Position.QA);
-        POJO obj3 = null;
+        Person obj1 = new Person();
+        Person obj2 = new Person(Position.QA);
+        Person obj3 = null;
         final StringBuilder sb = new StringBuilder();
 
         try {
