@@ -1,10 +1,14 @@
 package com.diosoft.lecture2;
 
+//local code review (vtegza): why it is package local? @ 6/29/2015
+//local code review (vtegza): please follow naming conventions, POJO - is wrong name for class @ 6/29/2015
 public class Person implements Cloneable {
     private static final Position POSITION = Position.DIRECTOR;
+    //local code review (vtegza): should have logical names (person not = position) @ 6/29/2015
     private Position position1 = Position.DEVELOPER;
     private Position position2 = Position.QA;
 
+    //local code review (vtegza): should be public @ 6/29/2015
     public Person() {}
 
     public Person(Position position) {
@@ -53,6 +57,7 @@ public class Person implements Cloneable {
         return result;
     }
 
+    //local code review (vtegza): take a look at requirements for Cloneable, you should not call supper @ 6/29/2015
     @Override
     public Person clone() throws CloneNotSupportedException {
         Person obj = new Person();
