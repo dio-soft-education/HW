@@ -1,5 +1,6 @@
 package com.diosoft.lecture2;
 
+//NOTE (vtegza): you can clean up my comments as soon as you implement them @ 06.07.15
 //local code review (vtegza): why it is package local? @ 6/29/2015
 //local code review (vtegza): please follow naming conventions, POJO - is wrong name for class @ 6/29/2015
 public class Person implements Cloneable {

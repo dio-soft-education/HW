@@ -154,6 +154,7 @@ public class ArrayHelper {
                 int[] arr1 = i > 0 ? arrays[1] : arrays[0];
                 int[] arr2 = i > 0 ? arrays[0] : arrays[1];
                 for (int element1 : arr1) {
+                    //local code review (vtegza): extract methods to make code more readable @ 06.07.15
                     boolean valid = false;
                     for (int element2 : arr2) {
                         if (element1 != element2) {

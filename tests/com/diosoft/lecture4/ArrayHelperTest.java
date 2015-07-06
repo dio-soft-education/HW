@@ -1,13 +1,12 @@
 package com.diosoft.lecture4;
 
-import com.diosoft.lecture3.*;
-import org.junit.*;
 import org.junit.Assert;
+import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
+//local code review (vtegza): no need to use Runner, but if it is for education - ok @ 06.07.15
 @RunWith(Runner.class)
 public class ArrayHelperTest {
 
@@ -68,6 +67,7 @@ public class ArrayHelperTest {
         // initialize variable inputs
         int[] leftArray = null;
         int[] rightArray = {3,5,24,4,1,2,34,45,32,5};
+        //local code review (vtegza): clean up unused code @ 06.07.15
         int[] expectedValue = null;
         String returnMessage = "test";
 

@@ -20,6 +20,7 @@ public class ArrayHelper {
             for (int element : rightArray) {
                 boolean exists = false;
                 for (int aLeftArray : leftArray) {
+                    //local code review (vtegza): try to migrate algorithms to binary search @ 06.07.15
                     if (element == aLeftArray) {
                         exists = true;
                         break;
