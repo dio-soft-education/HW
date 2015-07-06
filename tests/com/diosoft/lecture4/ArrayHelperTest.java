@@ -2,11 +2,15 @@ package com.diosoft.lecture4;
 
 import com.diosoft.lecture3.*;
 import org.junit.*;
+import org.junit.Assert;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
 import static org.junit.Assert.*;
 
+@RunWith(Runner.class)
 public class ArrayHelperTest {
-    private long startTime;
+
 
     @Test
     public void testLeftUnion() throws Exception {
@@ -30,7 +34,7 @@ public class ArrayHelperTest {
         // initialize variable inputs
         int[] leftArray = new int[0];
         int[] rightArray = {3,5,24,4,1,2,34,45,32,5};
-        int[] expectedValue = null;
+        int[] expectedValue = new int[0];
 
         // initialize class to test
         ArrayHelper testClass = new ArrayHelper();
@@ -75,6 +79,8 @@ public class ArrayHelperTest {
             testClass.leftUnion(leftArray, rightArray);
             fail("Exception should be thrown");
         }
+
+        // assert return value
         catch (MyException e) {
             Assert.assertEquals(returnMessage, e.getMessage());
         }
@@ -91,7 +97,10 @@ public class ArrayHelperTest {
         ArrayHelper testClass = new ArrayHelper();
 
         // invoke method on class to test
-        testClass.leftUnion(leftArray, rightArray);
+        int[] returnValue = testClass.leftUnion(leftArray, rightArray);
+
+        // assert return value
+        Assert.assertArrayEquals(expectedValue, returnValue);
     }
 
     @Test
@@ -99,23 +108,15 @@ public class ArrayHelperTest {
         // initialize variable inputs
         int[] leftArray = {1,5,4,23,65,32,78};
         int[] rightArray = {1,5,4,23,65,32,78};
-        int[] expectedValue = {1,5,4,23,65,32,78};
+        int[] expectedValue = {1,5,4,23,65,32,78,1,5,4,23,65,32,78};
 
         // initialize class to test
         ArrayHelper testClass = new ArrayHelper();
 
         // invoke method on class to test
-        testClass.leftUnion(leftArray, rightArray);
-    }
+        int[] returnValue = testClass.leftUnion(leftArray, rightArray);
 
-    @Before
-    public void setStartTime(){
-        startTime = System.nanoTime();
-    }
-
-    @After
-    public void writeExecutionTime(){
-        long endTime = System.nanoTime();
-        System.out.println("Test execution time = " + (endTime - startTime) + " nanoseconds");
+        // assert return value
+        Assert.assertArrayEquals(expectedValue, returnValue);
     }
 }
