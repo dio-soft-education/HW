@@ -9,13 +9,12 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
-
 @RunWith(Parameterized.class)
 public class ArrayHelperTest {
 
     private Person[] array1;
     private Person[] array2;
+    //local code review (vtegza): this array could be modified by another test @ 19.07.15
     private Person[] expected;
 
     public ArrayHelperTest(Person[] array1, Person[] array2, Person[] expected) {

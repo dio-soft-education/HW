@@ -6,6 +6,7 @@ public class Person {
     private final String phone;
     private final String email;
 
+    //local code review (vtegza): should be private @ 19.07.15
     public Person(Builder obj) {
         this.firstName = obj.firstName;
         this.lastName = obj.lastName;

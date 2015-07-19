@@ -1,6 +1,7 @@
 package com.diosoft.lecture5;
 
 public class ArrayHelper {
+
     private ServiceDelegate delegate;
 
     public ArrayHelper() {

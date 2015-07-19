@@ -13,7 +13,7 @@ public class Main {
         catch(Exception e) {
             System.out.println(e.getMessage());
         }
-
+        //local code review (vtegza): take a look at String.format @ 19.07.15
         System.out.println(sb.append("obj1 = ").append(obj1).toString());
         sb.setLength(0);
         System.out.println(sb.append("obj2 = ").append(obj2).toString());
