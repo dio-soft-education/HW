@@ -66,4 +66,18 @@ public class ArrayHelperTest {
         // assert return value
         Assert.assertArrayEquals(actual,expected);
     }
+
+    @Test
+    public void testLeftMerge1() {
+        Person[] expected = this.expected;
+        Person person2 = new Person.Builder().firstName("J11ohn").lastName("Week").build();
+        expected[1]=person2;
+        // initialize class to test
+        ArrayHelper helper = new ArrayHelper();
+        // invoke method on class to test
+        Person[] actual = helper.leftMerge(this.array1, this.array2, Person[].class);
+
+        // assert return value
+        Assert.assertArrayEquals(actual,expected);
+    }
 }
