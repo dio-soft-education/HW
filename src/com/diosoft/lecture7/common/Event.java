@@ -83,6 +83,7 @@ public class Event implements Serializable {
     }
 
     @Override
+    //local code review (vtegza): prefer stringBuilder template @ 27.07.15
     public String toString() {
         return "Event{" +
                 "name='" + name + '\'' +
@@ -152,6 +153,7 @@ public class Event implements Serializable {
             return new Event(this);
         }
 
+        //local code review (vtegza): create CalendarHelper for such functionality and put it there @ 27.07.15
         private GregorianCalendar getTime(String time) {
             GregorianCalendar converted = null;
             try {

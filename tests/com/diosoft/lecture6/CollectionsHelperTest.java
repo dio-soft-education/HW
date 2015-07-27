@@ -12,6 +12,7 @@ import java.util.List;
 
 
 @RunWith(Parameterized.class)
+//local code review (vtegza): add use caress for null, empty list @ 27.07.15
 public class CollectionsHelperTest {
 
     private Collection<Integer> collection1;
@@ -22,6 +23,7 @@ public class CollectionsHelperTest {
         this.collection2 = collection2 == null ? null : Collections.unmodifiableList(new ArrayList<Integer>(collection2));
     }
 
+    //local code review (vtegza): prefer clean tests instead of parametrized one, they should be used for specific need @ 27.07.15
     @Parameterized.Parameters
     public static Collection<Collection<Integer>[]> setArraysValues() {
         final Collection<Integer> collection1 = new ArrayList<Integer>(){{
