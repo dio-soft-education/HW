@@ -18,7 +18,7 @@ public class CollectionsHelper {
     }
 
     public <T> Collection<T> innerUnion(Collection<T> firstCollection, Collection<T> secondCollection) {
-
+        //local code review (vtegza): have not seen unit tests for this cases @ 27.07.15
         if(firstCollection == null)
             return secondCollection;
         if(secondCollection == null)

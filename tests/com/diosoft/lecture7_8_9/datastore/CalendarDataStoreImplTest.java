@@ -2,8 +2,7 @@ package com.diosoft.lecture7_8_9.datastore;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
+//local code review (vtegza): add unit tests @ 27.07.15
 public class CalendarDataStoreImplTest {
 
     @Test

@@ -2,8 +2,7 @@ package com.diosoft.lecture7_8_9.service;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
+//local code review (vtegza): add unit test @ 27.07.15
 public class CalendarServiceImplTest {
 
     @Test
