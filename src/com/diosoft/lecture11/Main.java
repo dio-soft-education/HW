@@ -1,6 +1,8 @@
 package com.diosoft.lecture11;
 
 import com.diosoft.lecture11.common.Person;
+import com.diosoft.lecture11.datastore.DataStoreExport;
+import com.diosoft.lecture11.datastore.DataStoreImport;
 import com.diosoft.lecture11.datastore.XmlDataStoreExportImpl;
 import com.diosoft.lecture11.datastore.XmlDataStoreImportImpl;
 import com.diosoft.lecture11.service.CalendarServiceImpl;
@@ -34,10 +36,10 @@ public class Main {
         for(int i = 0; i < args.length; i++)
             calendarService.addEvent(args[i], ("Test task" + i), "2015-07-25 12:00:00", "2015-07-25 13:00:00", attenders);
 
-        XmlDataStoreExportImpl xmlExport = context.getBean("xmlExport", XmlDataStoreExportImpl.class);
+        DataStoreExport xmlExport = context.getBean("xmlExport", XmlDataStoreExportImpl.class);
         xmlExport.exportDataStore("D:\\Projects\\HW\\src\\com\\diosoft\\lecture11\\export\\xml.zip");
 
-        XmlDataStoreImportImpl xmlImport = context.getBean("xmlImport", XmlDataStoreImportImpl.class);
+        DataStoreImport xmlImport = context.getBean("xmlImport", XmlDataStoreImportImpl.class);
         xmlImport.importDataStore("D:\\Projects\\HW\\src\\com\\diosoft\\lecture11\\export\\xml.zip");
     }
 }

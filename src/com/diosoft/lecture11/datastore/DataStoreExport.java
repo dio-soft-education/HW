@@ -10,7 +10,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public abstract class DataStoreExport {
-    abstract void exportDataStore(String path);
+    public abstract void exportDataStore(String path);
 
     protected static void packZip(File output, List<File> sources) throws IOException
     {

@@ -10,7 +10,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 public abstract class DataStoreImport {
-    abstract void importDataStore(String path);
+    public abstract void importDataStore(String path);
 
     protected List<File> unpackZip(File zipFile) throws IOException {
         List<File> list = new ArrayList<File>();
